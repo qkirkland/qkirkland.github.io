@@ -1,7 +1,19 @@
-// Project card expand/collapse
-function toggleCard(card) {
-    card.classList.toggle('active');
-  }
+// Make project cards open their GitHub repo on click
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', function(e) {
+      // Prevent following the link if clicking on a child <a>
+      if (e.target.tagName.toLowerCase() === 'a') return;
+      const url = card.getAttribute('data-link');
+      if (url) window.open(url, '_blank');
+    });
+    // Optional: open on Enter/Space key for accessibility
+    card.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        const url = card.getAttribute('data-link');
+        if (url) window.open(url, '_blank');
+      }
+    });
+  });
   
   // Dark mode toggle
   const toggleBtn = document.getElementById('toggle-dark');

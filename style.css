@@ -89,6 +89,7 @@
     opacity: 0;
     transform: translateY(40px) scale(0.98);
     animation: fadeInUp 0.7s forwards;
+    min-height: 180px;
   }
   .project-card:nth-child(1) { animation-delay: 0.1s; }
   .project-card:nth-child(2) { animation-delay: 0.2s; }
@@ -100,20 +101,17 @@
     box-shadow: 0 0 24px var(--accent2), 0 0 8px var(--accent);
     outline: 2px solid var(--accent2);
   }
-  .project-card img {
-    width: 100%;
-    border-radius: 6px;
-    margin-bottom: 0.7rem;
-    box-shadow: 0 0 8px #00ffe733;
-  }
   .project-details {
     display: none;
     margin-top: 0.5rem;
     font-size: 0.98em;
+    transition: opacity 0.3s;
+    opacity: 0;
   }
-  .project-card.active .project-details {
+  .project-card:hover .project-details,
+  .project-card:focus .project-details {
     display: block;
-    animation: fadeIn 0.4s;
+    opacity: 1;
   }
   .short-desc {
     font-size: 0.97em;
