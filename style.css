@@ -1,0 +1,166 @@
+:root {
+    --bg: #101820;
+    --bg-alt: #1a2633;
+    --accent: #00ffe7;
+    --accent2: #00bfff;
+    --text: #e0e0e0;
+    --card-bg: #181f2a;
+    --card-glow: 0 0 8px #00ffe7, 0 0 2px #00bfff;
+    --transition: 0.3s cubic-bezier(.4,2,.6,1);
+  }
+  body {
+    font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    transition: background 0.4s, color 0.4s;
+  }
+  header {
+    background: var(--bg-alt);
+    color: var(--accent);
+    padding: 2rem 1rem 1rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 8px #0008;
+    position: relative;
+    z-index: 2;
+  }
+  .cyber {
+    text-shadow: 0 0 8px var(--accent), 0 0 2px var(--accent2);
+    letter-spacing: 2px;
+  }
+  .subtitle {
+    color: var(--accent2);
+    font-size: 1.2em;
+    margin-top: -0.5em;
+  }
+  header nav {
+    margin-top: 1em;
+  }
+  header nav a, header nav button {
+    color: var(--accent);
+    margin: 0 0.7rem;
+    text-decoration: none;
+    font-weight: bold;
+    background: none;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  header nav a:hover, header nav button:hover {
+    color: #fff;
+  }
+  main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    background: var(--bg-alt);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px #0006;
+    position: relative;
+    z-index: 1;
+  }
+  h2 {
+    color: var(--accent2);
+    border-left: 4px solid var(--accent);
+    padding-left: 0.5em;
+    margin-top: 2em;
+  }
+  .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+  .project-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: var(--card-glow);
+    width: 270px;
+    padding: 1.2rem 1rem 1rem 1rem;
+    cursor: pointer;
+    transition: transform var(--transition), box-shadow var(--transition);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    animation: fadeInUp 0.7s forwards;
+  }
+  .project-card:nth-child(1) { animation-delay: 0.1s; }
+  .project-card:nth-child(2) { animation-delay: 0.2s; }
+  .project-card:nth-child(3) { animation-delay: 0.3s; }
+  .project-card:nth-child(4) { animation-delay: 0.4s; }
+  .project-card:nth-child(5) { animation-delay: 0.5s; }
+  .project-card:hover, .project-card:focus {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 0 24px var(--accent2), 0 0 8px var(--accent);
+    outline: 2px solid var(--accent2);
+  }
+  .project-card img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 0.7rem;
+    box-shadow: 0 0 8px #00ffe733;
+  }
+  .project-details {
+    display: none;
+    margin-top: 0.5rem;
+    font-size: 0.98em;
+  }
+  .project-card.active .project-details {
+    display: block;
+    animation: fadeIn 0.4s;
+  }
+  .short-desc {
+    font-size: 0.97em;
+    color: #b0eaff;
+  }
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #181f2a;
+    color: #00ffe7;
+    margin-top: 2rem;
+    font-size: 1em;
+    letter-spacing: 1px;
+    border-top: 1px solid #00ffe733;
+  }
+  #matrix-bg {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.18;
+  }
+  @media (max-width: 700px) {
+    main { padding: 1rem; }
+    .projects-grid { flex-direction: column; align-items: center; }
+    .project-card { width: 95vw; }
+  }
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  /* Dark mode toggle */
+  body.light-mode {
+    --bg: #f7f9fa;
+    --bg-alt: #fff;
+    --accent: #005fa3;
+    --accent2: #00bfff;
+    --text: #222;
+    --card-bg: #eaf6ff;
+    --card-glow: 0 0 8px #00bfff, 0 0 2px #005fa3;
+  }
+  body.light-mode header, body.light-mode main, body.light-mode footer {
+    box-shadow: none;
+  }
