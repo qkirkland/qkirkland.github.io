@@ -1,6 +1,6 @@
-# Quiara Kirkland – Python Security Engineer Portfolio
+# Quiara Kirkland – Security Engineer Portfolio
 
-Welcome! I’m Quiara Kirkland, a Python Security Engineer. This repository contains the code for my interactive portfolio site.
+Welcome! I’m Quiara Kirkland, a Security Engineer. This repository contains the code for my interactive portfolio site.
 
 🌐 **Live Site:** [https://qkirkland.github.io](https://qkirkland.github.io)
 
