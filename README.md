@@ -30,7 +30,7 @@ This site showcases my skills, projects, and experience in cybersecurity and Pyt
 
 ## Resume
 
-- [Download My Resume (PDF)](https://qkirkland.github.io/Quiara_Kirkland_Resume.pdf)
+- [Download My Resume (PDF)](https://qkirkland.github.io/Quiara_Kirkland_Security_Resume.pdf)
 
 ---
 
