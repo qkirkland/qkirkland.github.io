@@ -30,7 +30,7 @@ This site showcases my skills, projects, and experience in cybersecurity and Pyt
 
 ## Resume
 
-- [Download My Resume (PDF)](Quiara Kirkland - Security Analyst Tailored Resume.pdf)
+- [Download My Resume (PDF)](https://github.com/qkirkland/Quiara Kirkland - Security Analyst Tailored Resume.pdf)
 
 ---
 
